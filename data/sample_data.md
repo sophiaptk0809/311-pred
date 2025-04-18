@@ -1,0 +1,1 @@
+# All raw, proccessed, supporting data should be placed in this folder
