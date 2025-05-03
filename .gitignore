@@ -1,2 +1,6 @@
-*.csv
-*.geojson
+data/
+
+.DS_Store
+.env
+.venv
+
