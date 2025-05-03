@@ -1,2 +1,14 @@
 *.csv
 *.geojson
+*.json
+*.geojson.zip
+*.zip
+*.zip.sha256
+*.zip.sha256.asc
+*.zip.sha256.asc.sha256
+*.zip.sha256.asc.sha256.asc
+
+.DS_Store
+.env
+.venv
+
