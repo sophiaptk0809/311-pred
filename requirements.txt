@@ -1,0 +1,62 @@
+# Core data science libraries
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+scipy
+
+# Machine learning
+xgboost
+lightgbm
+imblearn
+
+# Geospatial analysis and mapping
+geopandas
+shapely
+folium
+
+# Jupyter and notebook support
+notebook
+jupyter
+ipykernel
+nbformat
+nbconvert
+
+# Data fetching and handling
+requests
+json5
+pathlib
+
+# For progress bars and utility
+tqdm
+
+# For warnings and system operations (optional, but sometimes useful)
+psutil
+
+# For date and time handling
+python-dateutil
+
+# For compatibility with older and newer versions
+packaging
+
+# For visualization enhancements
+plotly
+
+# For file system operations
+pyyaml
+
+# For advanced metrics and stats
+statsmodels
+
+# For handling missing values and imputation
+fancyimpute
+
+# For categorical encoding (if needed)
+category_encoders
+
+# For interactive widgets in notebooks
+ipywidgets
+
+# For exporting notebooks as scripts
+jupytext
