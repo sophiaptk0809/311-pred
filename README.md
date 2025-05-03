@@ -20,27 +20,25 @@ project/
 ## Data Setup Instructions
 
 ### 1. Download 311 Data
-1. Visit the Pittsburgh 311 data portal: https://data.wprdc.org/dataset/311-data
-2. Click on "Download" or "Export" to download the complete dataset in CSV format
-3. Alternatively, use the API to download the data directly in Python:
-   ```python
-   import pandas as pd
-   url = "https://data.wprdc.org/datastore/dump/76fda9d0-69be-4dd5-8108-0de7907fc5a4"
-   df = pd.read_csv(url)
-   ```
+1. All data files are stored in [Google Drive](https://drive.google.com/drive/folders/1yRkXccV5pG-vJD93VJ6cPRPnHxwE8rjT?usp=sharing).
+2. Download the required raw data files from Google Drive.
+3. Place the downloaded files in the `data/raw/` directory.
+4. Place any supporting files (such as geojson) in the `data/support/` directory.
 
-### 2. Place the Data
-1. Create a `data/raw` directory in the project root if it doesn't exist already
-2. Save the downloaded 311 data as `311_data.csv` in the `data/raw` directory
-3. Your data should be located at: `project/data/raw/311_data.csv`
+### 2. Data Folder Structure
+- `data/raw/` — All original, unprocessed data files (e.g., `311_data.csv`, `weather_data.csv`)
+- `data/support/` — Supporting/reference files (e.g., geojson)
+- `data/processed/` — Cleaned and processed data outputs
 
 ### 3. Running the Notebooks
-1. Start with the data cleaning notebook: `notebooks/1_data_cleaning.ipynb`
-2. This will generate processed datasets in the `data/processed` directory
+1. Start with the data cleaning notebook: `notebooks/1_data_cleaning.ipynb`  
+   - This will read from `data/raw/` and output cleaned datasets to `data/processed/`.
+2. Next, run the weather data cleaning notebook: `notebooks/1.5_weather_data_cleaning.ipynb`  
+   - This will process weather data and save results to `data/processed/`.
 3. Continue with the EDA notebook: `notebooks/2_eda.ipynb`
-4. Then feature engineering and modeling
+4. Proceed with the remaining notebooks in order as needed for your analysis and modeling.
 
 ### Note
-- The raw data is not tracked in this GitHub repository due to its size
-- Each notebook will output processed data to the appropriate directories
-- GeoJSON files for Pittsburgh neighborhoods will be stored in `data/support/geojson`
+- Raw data and large files are not tracked in this repository.
+- Each notebook will output processed data to the appropriate directories.
+- GeoJSON and other support files should be placed in `data/support/`.
